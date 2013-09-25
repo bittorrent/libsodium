@@ -10,7 +10,8 @@
 extern "C" {
 #endif
 
-#ifndef __cplusplus
+// visual studio does not support C99
+#if !defined __cplusplus && !defined _MSC_VER
 # define _SODIUM_C99(X) X
 #else
 # define _SODIUM_C99(X)

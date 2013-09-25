@@ -36,10 +36,11 @@ int crypto_stream_xor_afternm(unsigned char *outp, const unsigned char *inp, uns
   unsigned char b;
 
   uint32 tmp;
+  unsigned char *np;
 
   /* Copy nonce on the stack */
   copy2(&nonce_stack, (const int128 *) (noncep + 0));
-  unsigned char *np = (unsigned char *)&nonce_stack;
+  np = (unsigned char *)&nonce_stack;
 
     enc_block:
 
