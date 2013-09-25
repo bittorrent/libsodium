@@ -28,6 +28,8 @@
 
 #if defined(_MSC_VER)
 #define ALIGN(x) __declspec(align(x))
+// msvc does not support C99
+#define inline __inline
 #else
 #define ALIGN(x) __attribute__((aligned(x)))
 #endif

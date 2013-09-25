@@ -2,7 +2,7 @@
 #include <sys/types.h>
 
 #include <assert.h>
-#include <inttypes.h>
+#include <stdint.h>
 #include <limits.h>
 #include <stdint.h>
 

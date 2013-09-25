@@ -8,7 +8,6 @@
 #include <errno.h>
 #include <fcntl.h>
 #include <limits.h>
-#include <stdbool.h>
 #include <stdint.h>
 #include <stdlib.h>
 #include <string.h>
@@ -24,6 +23,12 @@
 #ifdef _WIN32
 # include <windows.h>
 # include <wincrypt.h>
+#endif
+
+#ifdef _MSC_VER
+typedef int8_t bool;
+#else
+# include <stdbool.h>
 #endif
 
 typedef struct SysRandom_ {

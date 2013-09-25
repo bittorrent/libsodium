@@ -1,5 +1,10 @@
 
-#include <stdbool.h>
+#ifdef _MSC_VER
+#include <stdint.h>
+typedef int8_t bool;
+#else
+# include <stdbool.h>
+#endif
 
 #include "core.h"
 #include "crypto_onetimeauth.h"

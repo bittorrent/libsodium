@@ -8,7 +8,6 @@
 #include <errno.h>
 #include <fcntl.h>
 #include <limits.h>
-#include <stdbool.h>
 #include <stdint.h>
 #include <stdlib.h>
 #include <string.h>
@@ -27,6 +26,12 @@
 # include <windows.h>
 # include <wincrypt.h>
 # include <sys/timeb.h>
+#endif
+
+#ifdef _MSC_VER
+typedef int8_t bool;
+#else
+# include <stdbool.h>
 #endif
 
 #define SALSA20_RANDOM_BLOCK_SIZE crypto_core_salsa20_OUTPUTBYTES

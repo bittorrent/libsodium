@@ -25,6 +25,8 @@
 #   define SODIUM_EXPORT __attribute__ ((visibility ("default")))
 #  endif
 # endif
+#else
+# define SODIUM_EXPORT
 #endif
 
 #endif
